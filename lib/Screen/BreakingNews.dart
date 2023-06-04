@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_apps/Api/ApiService.dart';
 import 'package:news_apps/Components/Newsitemlist.dart';
-import 'package:news_apps/Model/NewsModel.dart';
+import 'package:news_apps/Model/ArticleModel.dart';
 
 class Breaking extends StatefulWidget {
   const Breaking({Key? key}) : super(key: key);

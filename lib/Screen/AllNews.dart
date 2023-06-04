@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_apps/Api/ApiService.dart';
 import 'package:news_apps/Components/Newsitemlist.dart';
-import 'package:news_apps/Model/NewsModel.dart';
+import 'package:news_apps/Model/ArticleModel.dart';
 
 class AllNews extends StatefulWidget {
   const AllNews({Key? key}) : super(key: key);
@@ -68,20 +68,32 @@ String  sortBy= 'publishedAt';
               ],
             ),
           ),
-          Align(
-            alignment: Alignment.centerRight,
-            child: DropdownButton(
-              value: sortBy,
-                items: [
-                  DropdownMenuItem(child: Text('publishedAt'), value: 'publishedAt',),
-                  DropdownMenuItem(child: Text('popularity'), value: 'popularity',),
-                  DropdownMenuItem(child: Text('relevancy'), value: 'relevancy',),
-                ],
-                onChanged: (value){
-                setState(() {
-                  sortBy=value!;
-                });
-                }
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Container(
+                width: 130,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                child: Center(
+                  child: DropdownButton(
+                    value: sortBy,
+                      items: [
+                        DropdownMenuItem(child: Text('publishedAt'), value: 'publishedAt',),
+                        DropdownMenuItem(child: Text('popularity'), value: 'popularity',),
+                        DropdownMenuItem(child: Text('relevancy'), value: 'relevancy',),
+                      ],
+                      onChanged: (value){
+                      setState(() {
+                        sortBy=value!;
+                      });
+                      }
+                  ),
+                ),
+              ),
             ),
           ),
           Expanded(

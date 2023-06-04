@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_apps/Model/NewsModel.dart';
+import 'package:news_apps/Model/ArticleModel.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:news_apps/Screen/NewsDetails.dart';
 
